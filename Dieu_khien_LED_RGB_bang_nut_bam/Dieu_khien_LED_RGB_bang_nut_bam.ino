@@ -11,9 +11,9 @@ Khi bấm nút đèn LED sẻ chuyển từ màu đỏ --> xanh lá cây --> xan
 
 Các pin sử dụng:
 1. Digital Pin 2: Nút bấm
-2. Digital Pin 3: Chân đèn màu đỏ
-3. Digital Pin 5: Chân đèn màu xanh lá cây
-4. Digital Pin 6: Chân đèn màu xanh nước biển
+2. Digital Pin 11: Chân đèn màu đỏ
+3. Digital Pin 10: Chân đèn màu xanh lá cây
+4. Digital Pin 9: Chân đèn màu xanh nước biển
 
 Tác giả:
 Công ty Cơ Điện Tử PAP
@@ -28,15 +28,15 @@ long lastDebounceTime = 0;  // thời gian nút bấm trước đó
 long debounceDelay = 50;  // độ trễ của nút bấm
 int keyPressValue = 0;  // giá trị điều khiển đèn LED
 
-const int redPin = 3;  // chân màu đỏ của đèn LED kết nối vào cổng digital 3 của Arduino
-const int greenPin = 5;  // chân màu xanh lá cây của đèn LED kết nối vào cổng digital 5 của Arduino
-const int bluePin = 6;  // chân màu xanh nước biển của đèn LED kết nối vào cổng digital 6 của Arduino
+const int redPin = 11;  // chân màu đỏ của đèn LED kết nối vào cổng digital 3 của Arduino
+const int greenPin = 10;  // chân màu xanh lá cây của đèn LED kết nối vào cổng digital 5 của Arduino
+const int bluePin = 9;  // chân màu xanh nước biển của đèn LED kết nối vào cổng digital 6 của Arduino
 
 void setup() {
   Serial.begin(57600);  // khởi tạo cổng Serial với baudrate = 57600
   
   pinMode(buttonPin, INPUT);  // khai báo cổng 2 là đầu vào
-  pinMode(redPin, OUTPUT);  // khai báo cổng 3 (đỏ), 5 (xanh lá cây),6 (xanh nước biển) là đầu ra
+  pinMode(redPin, OUTPUT);  // khai báo cổng 11 (đỏ), 10 (xanh lá cây), 9 (xanh nước biển) là đầu ra
   pinMode(greenPin, OUTPUT);
   pinMode(bluePin, OUTPUT);
  
